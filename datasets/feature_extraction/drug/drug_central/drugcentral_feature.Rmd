@@ -1,0 +1,141 @@
+---
+title: "rxgnn_drug_feature"
+author: "Jingyi Liu"
+date: "2/23/2021"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+## Import drug data (from drugbank; identifier:DB ID) 
+```{r}
+drug_list<-read.csv('drug_nodes_in_kgv3.csv')
+head(drug_list)
+nrow(drug_list) #7928
+```
+
+## Drug bank All data
+```{r}
+db_all<-read_csv('drug_bank/drugbank_all.csv')
+head(db_all)
+db_all<-db_all%>%rename(id=`DrugBank ID`,CAS_ID=`CAS Number`,drug_type=`Drug Type`)
+```
+##MAPPING TABLE: DB ID--CAS ID
+```{r}
+db_mapping<-db_all%>%select(id,CAS_ID)
+head(db_mapping)
+nrow(db_mapping)#14315
+```
+
+##Drug type
+```{r}
+db_drug_type<-db_all%>%select(id,CAS_ID,drug_type)
+head(db_drug_type) 
+nrow(db_drug_type) #14315
+#drug_list
+#unique(db_drug_type$drug_type) #2
+```
+
+
+
+
+## Drug Central Features
+
+###Description (MW, TPSA, CLOGP)
+```{r}
+dc_description<-read.csv('drug_central/structures.csv')
+head(dc_description)
+#nrow(dc_description) #4531
+#MW
+dc_mw<-dc_description%>%select(cd_molweight,cas_reg_no,name,id)
+#TPSA
+dc_tpsa<-dc_description%>%select(tpsa,cas_reg_no,name,id)
+#CLOGP
+dc_clogp<-dc_description%>%select(clogp,cas_reg_no,name,id)
+```
+
+##MAPPING TABLE: Structure ID--CAS ID
+```{r}
+dc_mapping<-dc_description%>%select(id,cas_reg_no,name)%>%rename(Structure_ID=id,CAS_ID=cas_reg_no)
+nrow(dc_mapping) #4531
+#head(dc_mapping)
+```
+
+### MW
+```{r}
+#sum(dc_mw$cd_molweight!='NULL')#4288
+dc_mw<-dc_mw%>%filter(cd_molweight!='NULL')%>%rename(MW=cd_molweight,CAS_ID=cas_reg_no,Structure_ID=id)%>%select(MW,Structure_ID)
+nrow(dc_mw)
+#dc_mw<-dc_mw%>%rename(MW=cd_molweight,CAS_ID=cas_reg_no,Structure_ID=id)
+```
+
+###TPSA
+```{r}
+head(dc_tpsa)
+sum(dc_tpsa$tpsa!='NULL') #4127
+dc_tpsa<-dc_tpsa%>%filter(tpsa!='NULL')%>%rename(TPSA=tpsa,CAS_ID=cas_reg_no,Structure_ID=id)%>%select(TPSA,Structure_ID)
+#head(dc_tpsa)
+```
+
+### CLOGP
+```{r}
+#nrow(dc_clogp)
+sum(dc_clogp$clogp!='NULL') #3909
+dc_clogp<-dc_clogp%>%filter(clogp!='NULL')%>%rename(CLOGP=clogp,CAS_ID=cas_reg_no,Structure_ID=id)%>%select(CLOGP,Structure_ID)
+```
+
+###Structure type
+```{r}
+dc_str_type<-read.csv('drug_central/structure_type.csv')
+head(dc_str_type)
+#nrow(dc_str_type) #4609
+#unique(dc_str_type$type) #20 
+#sum(dc_str_type$type!='NULL') #4906
+dc_str_type<-dc_str_type%>%select(struct_id,type)%>%rename(Structure_ID=struct_id, STRUCTURE_TYPE=type)
+head(dc_str_type)
+```
+
+
+##Map structure id to CAS ID
+```{r}
+dc_feature<-dc_mapping%>%left_join(dc_str_type,by="Structure_ID")
+dc_feature<-left_join(dc_mapping,dc_str_type,by="Structure_ID")
+dc_feature<-left_join(dc_feature,dc_mw,by='Structure_ID')
+dc_feature<-left_join(dc_feature,dc_tpsa,by='Structure_ID')
+dc_feature<-left_join(dc_feature,dc_clogp,by='Structure_ID')
+head(dc_feature)
+nrow(dc_feature)
+```
+
+
+
+
+
+##Map CAS ID to DB ID
+```{r}
+db_dc<-left_join(db_mapping,dc_feature,by="CAS_ID")
+head(db_dc)
+nrow(db_dc)
+```
+
+```{r}
+left_join(drug_list,db_dc,by='id')
+
+```
+
+
+###Pka
+```{r}
+dc_pka<-read.csv('drug_central/pka.csv')
+head(dc_pka)
+nrow(dc_pka) #7301
+length(unique(dc_pka$struct_id)) #3344
+```
+
+
+
+
+
