@@ -1,1 +1,1 @@
-# precision-medicine-knowledge-graph
+# PrimeKG
