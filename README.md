@@ -245,7 +245,7 @@ For more information, visit [here](https://tdcommons.ai/benchmark/overview/).
 
 ## Cite Us
 
-If you find Therapeutics Data Commons useful, cite our NeurIPS paper:
+If you find PrimeKG useful, cite our arxiv paper: TODO
 
 ```
 @article{Huang2021tdc,
@@ -257,17 +257,9 @@ If you find Therapeutics Data Commons useful, cite our NeurIPS paper:
 }
 ```
 
-## Contribute
-
-TDC is a community-driven and open-science initiative. To get involved, join our [Slack Workspace](https://join.slack.com/t/pytdc/shared_invite/zt-x0ujg5v6-zwtQZt83fhRdgrYjXRFz5g) and checkout the [contribution guide](CONTRIBUTE.md)!
-
-## Contact
-
-Reach us at [contact@tdcommons.ai](mailto:contact@tdcommons.ai) or open a GitHub issue.
-
 ## Data Server
 
-TDC is hosted on [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/21LKWG) with the following persistent identifier [https://doi.org/10.7910/DVN/21LKWG](https://doi.org/10.7910/DVN/21LKWG). When Dataverse is under maintenance, TDC datasets cannot be retrieved. That happens rarely; please check the status on [the Dataverse website](https://dataverse.harvard.edu/).
+TDC is hosted on [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/21LKWG) with the following persistent identifier [https://doi.org/10.7910/DVN/IXA7BM](https://doi.org/10.7910/DVN/IXA7BM). When Dataverse is under maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please check the status on [the Dataverse website](https://dataverse.harvard.edu/).
 
 ## License
-TDC codebase is under MIT license. For individual dataset usage, please refer to the dataset license found in the website.
+PrimeKG codebase is under MIT license. For individual dataset usage, please refer to the dataset license found in the website.
