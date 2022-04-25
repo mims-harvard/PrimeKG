@@ -1,16 +1,90 @@
-pandas
-numpy
-scrapy
-bs4
-tqdm
-matplotlib
-goatools
-re
-shutil
-igraph
-scipy
-scikit-learn
-torch
-transformers
-Levenshtein
-seaborn
+appdirs==1.4.4
+attrs @ file:///opt/conda/conda-bld/attrs_1642510447205/work
+Automat @ file:///tmp/build/80754af9/automat_1600298431173/work
+bcrypt @ file:///Users/builder/ci_310/bcrypt_1642543383457/work
+beautifulsoup4 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_croot-cdiouih5/beautifulsoup4_1650462164803/work
+Bottleneck @ file:///opt/concourse/worker/volumes/live/f7139d11-2eee-4f6e-48cd-73168dc9e900/volume/bottleneck_1648028909796/work
+brotlipy==0.7.0
+certifi==2020.6.20
+cffi @ file:///Users/builder/ci_310/cffi_1643393868399/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+click @ file:///opt/concourse/worker/volumes/live/2d66025a-4d79-47c4-43be-6220928b6c82/volume/click_1646056610594/work
+colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
+constantly==15.1.0
+cryptography @ file:///Users/builder/ci_310/cryptography_1642543758909/work
+cssselect==1.1.0
+cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
+docopt==0.6.2
+filelock @ file:///opt/conda/conda-bld/filelock_1647002191454/work
+fonttools==4.25.0
+goatools==1.2.3
+huggingface-hub==0.5.1
+hyperlink @ file:///tmp/build/80754af9/hyperlink_1610130746837/work
+idna @ file:///tmp/build/80754af9/idna_1637925883363/work
+igraph==0.9.10
+importlib-metadata @ file:///opt/concourse/worker/volumes/live/a8740f82-0523-4b08-5bb5-afa0c929f5e0/volume/importlib-metadata_1648562424930/work
+incremental @ file:///tmp/build/80754af9/incremental_1636629750599/work
+itemadapter @ file:///tmp/build/80754af9/itemadapter_1626442940632/work
+itemloaders @ file:///opt/conda/conda-bld/itemloaders_1646805235997/work
+jmespath @ file:///Users/ktietz/demo/mc3/conda-bld/jmespath_1630583964805/work
+joblib @ file:///tmp/build/80754af9/joblib_1635411271373/work
+kiwisolver @ file:///Users/builder/ci_310/kiwisolver_1642533776499/work
+lxml @ file:///opt/concourse/worker/volumes/live/5afba315-4c6b-4a06-52c9-c74d70a22925/volume/lxml_1646642668916/work
+matplotlib @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_croot-hkd3cnd2/matplotlib-suite_1647506470899/work
+mkl-fft==1.3.1
+mkl-random @ file:///opt/concourse/worker/volumes/live/a9eca864-069c-4240-73c8-4e51b036a10d/volume/mkl_random_1639994047876/work
+mkl-service==2.4.0
+munkres==1.1.4
+numexpr @ file:///Users/builder/ci_310/numexpr_1642534542370/work
+numpy @ file:///opt/concourse/worker/volumes/live/dd582496-15cc-4dc7-506b-bc24af13a378/volume/numpy_and_numpy_base_1649782811617/work
+packaging @ file:///tmp/build/80754af9/packaging_1637314298585/work
+pandas==1.4.2
+parsel @ file:///opt/concourse/worker/volumes/live/3047b519-0844-41b9-414f-b8d11ceffa6b/volume/parsel_1646739989150/work
+patsy==0.5.2
+Pillow==9.0.1
+Protego @ file:///tmp/build/80754af9/protego_1598657180827/work
+protobuf==3.19.1
+pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+PyDispatcher==2.0.5
+pydot==1.4.2
+PyHamcrest @ file:///tmp/build/80754af9/pyhamcrest_1615748656804/work
+pyOpenSSL @ file:///opt/conda/conda-bld/pyopenssl_1643788558760/work
+pyparsing @ file:///tmp/build/80754af9/pyparsing_1635766073266/work
+PySocks @ file:///Users/builder/ci_310/pysocks_1642536366386/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+python-igraph==0.9.10
+pytz==2021.3
+PyYAML==6.0
+queuelib==1.5.0
+regex @ file:///opt/concourse/worker/volumes/live/63aed588-2398-47ee-5ad3-e682b77e31f2/volume/regex_1648447727979/work
+requests @ file:///opt/conda/conda-bld/requests_1641824580448/work
+requests-file @ file:///Users/ktietz/demo/mc3/conda-bld/requests-file_1629455781986/work
+sacremoses==0.0.43
+scikit-learn @ file:///Users/builder/ci_310/scikit-learn_1642608976196/work
+scipy @ file:///Users/builder/ci_310/scipy_1642604663510/work
+Scrapy @ file:///opt/concourse/worker/volumes/live/cc02512e-71cb-41d5-5d7e-083095ec31e8/volume/scrapy_1646837790138/work
+seaborn @ file:///tmp/build/80754af9/seaborn_1629307859561/work
+service-identity @ file:///Users/ktietz/demo/mc3/conda-bld/service_identity_1629460757137/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+soupsieve @ file:///tmp/build/80754af9/soupsieve_1636706018808/work
+statsmodels==0.13.2
+texttable==1.6.4
+threadpoolctl @ file:///Users/ktietz/demo/mc3/conda-bld/threadpoolctl_1629802263681/work
+tldextract @ file:///opt/conda/conda-bld/tldextract_1646638314385/work
+tokenizers @ file:///Users/builder/ci_310/tokenizers_1642538207754/work
+torch==1.11.0
+torchaudio==0.11.0
+torchvision==0.12.0
+tornado @ file:///Users/builder/ci_310/tornado_1642538510757/work
+tqdm @ file:///opt/conda/conda-bld/tqdm_1647339053476/work
+transformers==4.11.3
+Twisted @ file:///opt/concourse/worker/volumes/live/2c4ccb7b-0d3a-4d59-73e9-ec8e6bd97618/volume/twisted_1646835240498/work
+typing_extensions @ file:///opt/conda/conda-bld/typing_extensions_1647553014482/work
+urllib3 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_0b00bbfb-4d57-4b5b-af70-5677ec53f4ac495c5h1w/croots/recipe/urllib3_1650637219008/work
+w3lib @ file:///Users/ktietz/demo/mc3/conda-bld/w3lib_1629359764703/work
+xlrd==1.2.0
+XlsxWriter==3.0.3
+zipp @ file:///opt/conda/conda-bld/zipp_1641824620731/work
+zope.interface @ file:///Users/builder/ci_310/zope.interface_1642542202636/work
