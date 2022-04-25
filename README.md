@@ -68,38 +68,21 @@ TDC is an open-source initiative. To get involved, check our [Contribution Guide
 
 <p align="center"><img src="https://raw.githubusercontent.com/mims-harvard/TDC/master/fig/tdc_overview.png" alt="overview" width="600px" /></p>
 
-## Installation
+## Environment setup
 
 ### Using `pip`
 
-To install the core environment dependencies of TDC, use `pip`:
+To install the dependencies required to run the PrimeKG code, use `pip`:
 
 ```bash
-pip install PyTDC
+pip install -r requirements.txt
 ```
 
-**Note**: TDC is in the beta release. Please update your local copy regularly by
+### Or use `conda`
 
 ```bash
-pip install PyTDC --upgrade
+conda env create --name PrimeKG --file=environments.yml
 ```
-
-The core data loaders are lightweight with minimum dependency on external packages:
-
-```bash
-numpy, pandas, tqdm, scikit-learn, fuzzywuzzy, seaborn
-```
-
-For utilities requiring extra dependencies, TDC prints installation instructions. To install full dependencies, please use the following `conda-forge` solution. 
-
-### Using `conda`
-
-Data functions for molecule oracles, scaffold split, etc., require certain packages like RDKit. To install those packages, use the following `conda` installation: 
-
-```bash
-conda install -c conda-forge pytdc
-```
-
 
 ## Tutorials
 
@@ -118,7 +101,6 @@ We provide  tutorials to get started with TDC:
 | [U1.1](tutorials/User_Group/UserGroupMeeting_Tianfan.ipynb)   | Demo presented at first TDC User Group Meetup                             |
 | [U1.2](tutorials/User_Group/UserGroupMeeting_Wenhao.ipynb)   | Demo presented at first TDC User Group Meetup                             |
 
-
 ## Design of TDC
 
 TDC has a unique three-tiered hierarchical structure, which to our knowledge, is the first attempt at systematically organizing machine learning for therapeutics. We organize TDC into three distinct *problems*. For each problem, we give a collection *learning tasks*. Finally, for each task, we provide a series of *datasets*.
@@ -134,31 +116,6 @@ In the first tier, after observing a large set of therapeutics tasks, we categor
 The second tier in the TDC structure is organized into learning tasks. Improvement on these tasks can result in numerous applications, including identifying personalized combinatorial therapies, designing novel class of antibodies, improving disease diagnosis, and finding new cures for emerging diseases.
 
 Finally, in the third tier of TDC, each task is instantiated via multiple datasets. For each dataset, we provide several splits of the dataset into training, validation, and test sets to simulate the type of understanding and generalization (e.g., the model's ability to generalize to entirely unseen compounds or to granularly resolve patient response to a polytherapy) needed for transition into production and clinical implementation.
-
-
-## TDC Data Loaders
-
-TDC provides a collection of workflows with intuitive, high-level APIs for both beginners and experts to create machine learning models in Python. Building off the modularized "Problem -- Learning Task -- Data Set" structure (see above) in TDC, we provide a three-layer API to access any learning task and dataset. This hierarchical API design allows us to easily incorporate new tasks and datasets.
-
-For a concrete example, to obtain the HIA dataset from ADME therapeutic learning task in the single-instance prediction problem:
-
-```python
-from tdc.single_pred import ADME
-data = ADME(name = 'HIA_Hou')
-# split into train/val/test with scaffold split methods
-split = data.get_split(method = 'scaffold')
-# get the entire data in the various formats
-data.get_data(format = 'df')
-```
-
-You can see all the datasets that belong to a task as follows:
-
-```python
-from tdc.utils import retrieve_dataset_names
-retrieve_dataset_names('ADME')
-```
-
-See all therapeutic tasks and datasets on the [TDC website](https://zitniklab.hms.harvard.edu/TDC/overview/)!
 
 ## TDC Data Functions
 
@@ -259,7 +216,7 @@ If you find PrimeKG useful, cite our arxiv paper: TODO
 
 ## Data Server
 
-TDC is hosted on [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/21LKWG) with the following persistent identifier [https://doi.org/10.7910/DVN/IXA7BM](https://doi.org/10.7910/DVN/IXA7BM). When Dataverse is under maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please check the status on [the Dataverse website](https://dataverse.harvard.edu/).
+PrimeKG is hosted on [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/21LKWG) with the following persistent identifier [https://doi.org/10.7910/DVN/IXA7BM](https://doi.org/10.7910/DVN/IXA7BM). When Dataverse is under maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please check the status on [the Dataverse website](https://dataverse.harvard.edu/).
 
 ## License
 PrimeKG codebase is under MIT license. For individual dataset usage, please refer to the dataset license found in the website.
