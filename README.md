@@ -101,6 +101,8 @@ We provide  tutorials to get started with TDC:
 | [U1.1](tutorials/User_Group/UserGroupMeeting_Tianfan.ipynb)   | Demo presented at first TDC User Group Meetup                             |
 | [U1.2](tutorials/User_Group/UserGroupMeeting_Wenhao.ipynb)   | Demo presented at first TDC User Group Meetup                             |
 
+| Database  | Processing scripts       | Processed data created     | Edges in PrimeKG   |
+|-----------|--------------------------|----------------------------|--------------------|
 Bgee gene expression knowledge base in animals  | bgee.py  | anatomy_gene.csv
 Comparative Toxicogenomics Database   | ctd.py  | exposure_data.csv
 DisGeNET   | -    | curated_gene_disease_associations.tsv
