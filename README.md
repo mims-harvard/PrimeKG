@@ -101,20 +101,26 @@ We provide  tutorials to get started with TDC:
 | [U1.1](tutorials/User_Group/UserGroupMeeting_Tianfan.ipynb)   | Demo presented at first TDC User Group Meetup                             |
 | [U1.2](tutorials/User_Group/UserGroupMeeting_Wenhao.ipynb)   | Demo presented at first TDC User Group Meetup                             |
 
-| Database  | Processing scripts       | Processed data created     | Edges in PrimeKG   |
-|-----------|--------------------------|----------------------------|--------------------|
-Bgee gene expression knowledge base in animals  | bgee.py  | anatomy_gene.csv
+| Database  | Processing scripts       | Expected script output        |
+|-----------|--------------------------|----------------------|
+Bgee  | bgee.py  | anatomy_gene.csv 
 Comparative Toxicogenomics Database   | ctd.py  | exposure_data.csv
 DisGeNET   | -    | curated_gene_disease_associations.tsv
-DrugBank   | -    | -
-Drug Central   | -    | -
-
-DrugBank
- The raw file `full database.xml' was processed using the \emph{drugbank\_drug\_drug.py} script.The processed data, found at `drug\_drug.csv', contains 2,682,157 associations. 
- 
-We also extracted drug features from the raw data using the \emph{parsexml\_drugbank.ipynb} and \emph{Parsed\_feature.ipynb} notebooks. The processed features can be found at `group.csv', `state.csv', `description.csv', `moa.csv', `atc\_1.csv', `atc\_2.csv', `atc\_3.csv', `atc\_4.csv', `pharm.csv', `Hl.csv', `pb.csv', and `pathway.csv' respectively.
-
-Drug target/enzyme/... These data were processed using the \emph{drugbank\_drug\_protein.py} script. , found at `drug\_protein.csv',
+DrugBank   | drugbank_drug_drug.py   | drug_drug.csv
+DrugBank   | parsexml_drugbank.ipynb, Parsed_feature.ipynb | 12 drug feature files 
+DrugBank   | drugbank_drug_protein.py   | drug_protein.csv
+Drug Central   | drugcentral_queries.txt   | drug_disease.csv
+Drug Central   | drugcentral_feature.Rmd   | dc_features.csv
+Entrez Gene | ncbigene.py | protein_go_associations.csv 
+Gene Ontology | go.py | go_terms_info.csv, go_terms_relations.csv 
+Human Phenotype Ontology | hpo.py, hpo_obo_parser.py | hp_terms.csv, hp_parents.csv, hp_references.csv
+Human Phenotype Ontology | hpoa.py | disease_phenotype_pos.csv, disease_phenotype_neg.csv
+MONDO | mondo.py,  mondo_obo_parser.py | mondo_terms.csv, mondo_parents.csv, mondo_references.csv, mondo_subsets.csv, mondo_definitions.csv
+Reactome | reactome.py | reactome_ncbi.csv, reactome_terms.csv, reactome_relations.csv
+SIDER | sider.py | sider.csv
+UBERON | uberon.py | uberon_terms.csv, uberon_rels.csv, uberon_is_a.csv
+UMLS | umls.py, map_umls_mondo.py | umls_mondo.csv
+UMLS | umls.ipynb | umls_def_disorder_2021.csv, umls_def_disease_2021.csv
 
 ## Design of TDC
 
