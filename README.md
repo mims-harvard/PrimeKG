@@ -101,6 +101,19 @@ We provide  tutorials to get started with TDC:
 | [U1.1](tutorials/User_Group/UserGroupMeeting_Tianfan.ipynb)   | Demo presented at first TDC User Group Meetup                             |
 | [U1.2](tutorials/User_Group/UserGroupMeeting_Wenhao.ipynb)   | Demo presented at first TDC User Group Meetup                             |
 
+Bgee gene expression knowledge base in animals  | bgee.py  | anatomy_gene.csv
+Comparative Toxicogenomics Database   | ctd.py  | exposure_data.csv
+DisGeNET   | -    | curated_gene_disease_associations.tsv
+DrugBank   | -    | -
+Drug Central   | -    | -
+
+DrugBank
+ The raw file `full database.xml' was processed using the \emph{drugbank\_drug\_drug.py} script.The processed data, found at `drug\_drug.csv', contains 2,682,157 associations. 
+ 
+We also extracted drug features from the raw data using the \emph{parsexml\_drugbank.ipynb} and \emph{Parsed\_feature.ipynb} notebooks. The processed features can be found at `group.csv', `state.csv', `description.csv', `moa.csv', `atc\_1.csv', `atc\_2.csv', `atc\_3.csv', `atc\_4.csv', `pharm.csv', `Hl.csv', `pb.csv', and `pathway.csv' respectively.
+
+Drug target/enzyme/... These data were processed using the \emph{drugbank\_drug\_protein.py} script. , found at `drug\_protein.csv',
+
 ## Design of TDC
 
 TDC has a unique three-tiered hierarchical structure, which to our knowledge, is the first attempt at systematically organizing machine learning for therapeutics. We organize TDC into three distinct *problems*. For each problem, we give a collection *learning tasks*. Finally, for each task, we provide a series of *datasets*.
@@ -117,7 +130,9 @@ The second tier in the TDC structure is organized into learning tasks. Improveme
 
 Finally, in the third tier of TDC, each task is instantiated via multiple datasets. For each dataset, we provide several splits of the dataset into training, validation, and test sets to simulate the type of understanding and generalization (e.g., the model's ability to generalize to entirely unseen compounds or to granularly resolve patient response to a polytherapy) needed for transition into production and clinical implementation.
 
-## TDC Data Functions
+## PrimeKG Code Overview
+
+The code to harmonize datasets and construct the knowledge graph is available at  \emph{build\_graph.ipynb}. The code required to engineer features can be found at \emph{engineer\_features.ipynb} and \emph{mapping\_mayo.ipynb}.
 
 #### Dataset Splits
 
