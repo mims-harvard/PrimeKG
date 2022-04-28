@@ -2,44 +2,39 @@
 ----
 
 [![website](https://img.shields.io/badge/website-live-brightgreen)](https://tdcommons.ai)
-[![PyPI version](https://badge.fury.io/py/PyTDC.svg)](https://badge.fury.io/py/PyTDC)
-[![Downloads](https://pepy.tech/badge/pytdc/month)](https://pepy.tech/project/pytdc)
-[![Downloads](https://pepy.tech/badge/pytdc)](https://pepy.tech/project/pytdc)
+[![Dataverse](https://doi.org/10.7910/DVN/IXA7BM)
 [![GitHub Repo stars](https://img.shields.io/github/stars/mims-harvard/TDC)](https://github.com/mims-harvard/TDC/stargazers)
 [![GitHub Repo stars](https://img.shields.io/github/forks/mims-harvard/TDC)](https://github.com/mims-harvard/TDC/network/members)
-
-[![Build Status](https://travis-ci.org/mims-harvard/TDC.svg?branch=master)](https://travis-ci.org/mims-harvard/TDC)
-[![TDC CircleCI](https://circleci.com/gh/mims-harvard/TDC.svg?style=svg)](https://app.circleci.com/pipelines/github/mims-harvard/TDC)
-[![Documentation Status](https://readthedocs.org/projects/tdc/badge/?version=latest)](http://tdc.readthedocs.io/?badge=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
+[**Website**](https://tdcommons.ai) | [**NeurIPS 2021 Paper**](https://openreview.net/pdf?id=8nvgnORnoWr) | [**Long Paper**](https://arxiv.org/abs/2102.09548)
 
-[**Website**](https://tdcommons.ai) | [**NeurIPS 2021 Paper**](https://openreview.net/pdf?id=8nvgnORnoWr) | [**Long Paper**](https://arxiv.org/abs/2102.09548) | [**Slack**](https://join.slack.com/t/pytdc/shared_invite/zt-x0ujg5v6-zwtQZt83fhRdgrYjXRFz5g) | [**TDC Mailing List**](https://groups.io/g/tdc) | [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40ProjectTDC)](https://twitter.com/ProjectTDC)
-
-**Therapeutics Data Commons (TDC)** is the first unifying framework to systematically access, evaluate, and benchmark machine learning methods across the entire range of therapeutics. TDC supports the development of novel ML methods and theory, with a strong bent towards developing the foundations of which ML algorithms are most suitable for drug discovery applications and why.
+**Precision Medicine Knowledge Graph (PrimeKG)** is the first unifying framework to systematically access, evaluate, and benchmark machine learning methods across the entire range of therapeutics. TDC supports the development of novel ML methods and theory, with a strong bent towards developing the foundations of which ML algorithms are most suitable for drug discovery applications and why.
 
 The collection of curated AI/ML-ready datasets, AI/ML tasks, and benchmarks in TDC serves as a meeting point for domain and machine learning scientists. We envision that TDC can considerably accelerate ML model development, validation and transition into biomedical and clinical implementation.
 
-TDC is an open-source initiative. To get involved, check our [Contribution Guidelines](CONTRIBUTE.md)!
-
+<!-- 
 **Invited talk at the [Harvard Symposium on Drugs for Future Pandemics (#futuretx20)](https://www.drugsymposium.org/)** [**\[Slides\]**](https://drive.google.com/file/d/11eTrh_lsqPcwu3RZRYjJGNpJ3s18YlBS/view) [**\[Video\]**](https://youtu.be/ZuCOhEZtaOw)
 
 **Presented at [NeurIPS 2021](https://openreview.net/forum?id=8nvgnORnoWr)** [**\[Poster\]**](https://drive.google.com/file/d/1LfF8mfPLUqAVEzH3KPBxDO_VF7nLFtiJ/view?usp=sharing) / **Oral at [ELLIS ML4Molecules](https://moleculediscovery.github.io/workshop2021/)** [**\[Slides\]**](https://drive.google.com/file/d/1iOSW_5eruca4vdygDxS1H64c49oQuH40/view?usp=sharing) / **Presented at [Baylearn](https://baylearn-org.github.io/www/)** [**\[Slides\]**](https://drive.google.com/file/d/1BNpk3dOdqE3ksgyVV-V3xySdBMq-8cXL/view?usp=sharing) [**\[Poster\]**](https://drive.google.com/file/d/1LfF8mfPLUqAVEzH3KPBxDO_VF7nLFtiJ/view?usp=sharing)
 
 **[Recording of the first TDC User Group Meetup](https://harvard.zoom.us/rec/share/HO0TjRPs56YG-Fu3i033izaTwebB4KwUhPeNURkWSI-anrH9su03lCtUlHeZG-WP.67ZJmAIHsD7Q_2GQ) (Jan 25th, 2022). [Agenda](https://shoutout.wix.com/so/d1Nv1pC2d#/main)**
-
+ -->
+ 
 ## Updates
+<!-- 
 - `0.3.6`: Add a new task on TCR-Epitope Binding! See [here](https://tdcommons.ai/multi_pred_tasks/tcrepitope/)!
 - `0.3.5`: 1. Add hERG central dataset 2. Add ChEMBL V29 3. Fixed reaction type issue for USPTO-50 4. Fix bug on higher order multi-instance prediction cold-split! More information, see [here](https://tdcommons.ai/news/)!
 - `0.3.4`: Bug fixes on docking oracles, KL divergence measure, see commit [0f7121a](https://github.com/mims-harvard/TDC/commit/0f7121a3bd7cb833fb55441054d7d87ff3c4ebd6) and commit [6e46fbd](https://github.com/mims-harvard/TDC/commit/6e46fbd1a946b3a6b9f7ba456d60dc09480c68b9)!
 - `0.3.3`: Extended support on cold split - now you can split based on multiple entities, see [#127](https://github.com/mims-harvard/TDC/pull/127)!
-- `0.3.2`: Bug fixes - Adding support for harmonizing same DTIs with different affinities (KIBA, DAVIS Updated accordingly, see [#98](https://github.com/mims-harvard/TDC/issues/98)). Support label name retrieval for TWOSIDES ([#121](https://github.com/mims-harvard/TDC/issues/121)), and add gene symbol info to GDSC ([#122](https://github.com/mims-harvard/TDC/issues/122)). 
+- `0.3.2`: Bug fixes - Adding support for harmonizing same DTIs with different affinities (KIBA, DAVIS Updated accordingly, see [#98](https://github.com/mims-harvard/TDC/issues/98)). Support label name retrieval for TWOSIDES ([#121](https://github.com/mims-harvard/TDC/issues/121)), and add gene symbol info to GDSC ([#12t2](https://github.com/mims-harvard/TDC/issues/122)). 
 - `0.3.1`: We have restructured the codebase to be contributor-friendly! Checkout the TDC documentation at [https://tdc.readthedocs.io](https://tdc.readthedocs.io/)!
 - TDC paper is accepted to [NeurIPS 2021 Datasets and Benchmarks](https://openreview.net/pdf?id=8nvgnORnoWr)
 - `0.2.0`: Release docking molecule generation benchmark! Checkout [here](https://tdcommons.ai/benchmark/docking_group/overview/)!
 - `0.1.9`: Support molecule filters! Checkout [here](https://tdcommons.ai//functions/data_process/#molecule-filters)!
 - `0.1.8`: Streamlined and simplified the leaderboard programming frameworks! Now, you can submit a result for a single dataset! Checkout [here](https://tdcommons.ai/benchmark/overview/)!
-- TDC white paper is alive on [arXiv](https://arxiv.org/abs/2102.09548)!
+ -->
+- PrimeKG is live on [arXiv](https://arxiv.org/abs/2102.09548) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
 
 <details>
   <summary>Click here for older updates!</summary>
@@ -169,63 +164,6 @@ score = evaluator(y_true, y_pred)
 #### Data Processing 
 
 TDC provides numerous data processing functions, including label transformation, data balancing, pair data to PyG/DGL graphs, negative sampling, database querying and so on. For function usage, see our [data processing page](https://zitniklab.hms.harvard.edu/TDC/functions/data_process/) on the TDC website.
-
-#### Molecule Generation Oracles
-
-For molecule generation tasks, we provide 10+ oracles for both goal-oriented and distribution learning. For detailed usage of each oracle, please checkout the [oracle page](https://zitniklab.hms.harvard.edu/TDC/functions/oracles/) on the website. For example, we want to retrieve the GSK3Beta oracle:
-
-```python
-from tdc import Oracle
-oracle = Oracle(name = 'GSK3B')
-oracle(['CC(C)(C)....' 
-  'C[C@@H]1....',
-  'CCNC(=O)....', 
-  'C[C@@H]1....'])
-
-# [0.03, 0.02, 0.0, 0.1]
-```
-
-## TDC Leaderboards
-
-Every dataset in TDC is a benchmark, and we provide training/validation and test sets for it, together with data splits and performance evaluation metrics. To participate in the leaderboard for a specific benchmark, follow these steps:
-
-* Use the TDC benchmark data loader to retrieve the benchmark.
-
-* Use training and/or validation set to train your model.
-
-* Use the TDC model evaluator to calculate the performance of your model on the test set.
-
-* Submit the test set performance to a TDC leaderboard.
-
-As many datasets share a therapeutics theme, we organize benchmarks into meaningfully defined groups, which we refer to as benchmark groups. Datasets and tasks within a benchmark group are carefully curated and centered around a theme (for example, TDC contains a benchmark group to support ML predictions of the ADMET properties). While every benchmark group consists of multiple benchmarks, it is possible to separately submit results for each benchmark in the group. Here is the code framework to access the benchmarks:
-
-```python
-from tdc import BenchmarkGroup
-group = BenchmarkGroup(name = 'ADMET_Group', path = 'data/')
-predictions_list = []
-
-for seed in [1, 2, 3, 4, 5]:
-    benchmark = group.get('Caco2_Wang') 
-    # all benchmark names in a benchmark group are stored in group.dataset_names
-    predictions = {}
-    name = benchmark['name']
-    train_val, test = benchmark['train_val'], benchmark['test']
-    train, valid = group.get_train_valid_split(benchmark = name, split_type = 'default', seed = seed)
-    
-        # --------------------------------------------- # 
-        #  Train your model using train, valid, test    #
-        #  Save test prediction in y_pred_test variable #
-        # --------------------------------------------- #
-        
-    predictions[name] = y_pred_test
-    predictions_list.append(predictions)
-
-results = group.evaluate_many(predictions_list)
-# {'caco2_wang': [6.328, 0.101]}
-```
-
-For more information, visit [here](https://tdcommons.ai/benchmark/overview/).
-
 
 ## Cite Us
 
