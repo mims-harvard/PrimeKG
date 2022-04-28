@@ -6,7 +6,7 @@
 [![GitHub Repo stars](https://img.shields.io/github/forks/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-[**Website**](TODO_add_url_here)| [**Arxiv Paper**](TODO_add_url_here) | | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
+[**Website**](TODO_add_url_here) | [**Arxiv Paper**](TODO_add_url_here) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
 
 **Precision Medicine Knowledge Graph (PrimeKG)** TODO is the first unifying framework to systematically access, evaluate, and benchmark machine learning methods across the entire range of therapeutics. TDC supports the development of novel ML methods and theory, with a strong bent towards developing the foundations of which ML algorithms are most suitable for drug discovery applications and why.
 
