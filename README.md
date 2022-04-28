@@ -43,7 +43,7 @@ The collection of curated AI/ML-ready datasets, AI/ML tasks, and benchmarks in T
 - *Data functions*: PrimeKG provides extensive data functions, including processors for primary resources and scripts to build an updated knowledge graph.
 - *Open-source initiative*: PrimeKG is an open-source initiative. If you want to get involved, let us know. 
 
-<p align="center"><img src="https://github.com/mims-harvard/PrimeKG/blob/main/fig/schematic.pdf" alt="overview" width="600px" /></p>
+<p align="center"><img src="https://github.com/mims-harvard/PrimeKG/blob/main/fig/schematic.png" alt="overview" width="600px" /></p>
 
 ## Environment setup
 
