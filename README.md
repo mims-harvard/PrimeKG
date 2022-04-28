@@ -1,15 +1,14 @@
 # PrimeKG
 ----
 
-[![website](https://img.shields.io/badge/website-live-brightgreen)](https://tdcommons.ai)
-[![Dataverse](https://doi.org/10.7910/DVN/IXA7BM)
-[![GitHub Repo stars](https://img.shields.io/github/stars/mims-harvard/TDC)](https://github.com/mims-harvard/TDC/stargazers)
-[![GitHub Repo stars](https://img.shields.io/github/forks/mims-harvard/TDC)](https://github.com/mims-harvard/TDC/network/members)
+[![website](https://img.shields.io/badge/website-live-brightgreen)](TODO_add_url_here)
+[![GitHub Repo stars](https://img.shields.io/github/stars/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/stargazers)
+[![GitHub Repo stars](https://img.shields.io/github/forks/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-[**Website**](https://tdcommons.ai) | [**NeurIPS 2021 Paper**](https://openreview.net/pdf?id=8nvgnORnoWr) | [**Long Paper**](https://arxiv.org/abs/2102.09548)
+[**Website**](TODO_add_url_here)| [**Arxiv Paper**](TODO_add_url_here) | | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
 
-**Precision Medicine Knowledge Graph (PrimeKG)** is the first unifying framework to systematically access, evaluate, and benchmark machine learning methods across the entire range of therapeutics. TDC supports the development of novel ML methods and theory, with a strong bent towards developing the foundations of which ML algorithms are most suitable for drug discovery applications and why.
+**Precision Medicine Knowledge Graph (PrimeKG)** TODO is the first unifying framework to systematically access, evaluate, and benchmark machine learning methods across the entire range of therapeutics. TDC supports the development of novel ML methods and theory, with a strong bent towards developing the foundations of which ML algorithms are most suitable for drug discovery applications and why.
 
 The collection of curated AI/ML-ready datasets, AI/ML tasks, and benchmarks in TDC serves as a meeting point for domain and machine learning scientists. We envision that TDC can considerably accelerate ML model development, validation and transition into biomedical and clinical implementation.
 
@@ -36,30 +35,13 @@ The collection of curated AI/ML-ready datasets, AI/ML tasks, and benchmarks in T
  -->
 - PrimeKG is live on [arXiv](https://arxiv.org/abs/2102.09548) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
 
-<details>
-  <summary>Click here for older updates!</summary>
-
-- `0.1.6`: Released the second leaderboard on drug combination screening prediction! Checkout [here](https://tdcommons.ai/benchmark/drugcombo_group/)!
-- `0.1.5`: Added four realistic oracles from docking scores and synthetic accessibility! Checkout [here](https://tdcommons.ai/functions/oracles/)!
-- `0.1.4`: Added the 1st version of [`MolConvert`](https://tdcommons.ai/functions/data_process/#molecule-conversion) class that can map among ~15 molecular formats in 2 lines of code (For 2D: from SMILES/SEFLIES and convert to SELFIES/SMILES, Graph2D, PyG, DGL, ECFP2-6, MACCS, Daylight, RDKit2D, Morgan, PubChem; For 3D: from XYZ, SDF files to Graph3D, Columb Matrix); Also a quality check on DTI datasets with IDs added.
-- Checkout **[Contribution Guide](CONTRIBUTE.md)** to add new dataset, task, function!
-- `0.1.3`: Added new therapeutics task on CRISPR Repair Outcome Prediction! Added a data function to map molecule to popular cheminformatics fingerprint.
-- `0.1.2`: The first TDC Leaderboard is released! Checkout the leaderboard guide [here](https://tdcommons.ai/benchmark/overview/) and the ADMET Leaderboard [here](https://tdcommons.ai/benchmark/admet_group/).
-- `0.1.1`: Replaced VD, Half Life and Clearance datasets from new sources that have higher qualities. Added LD50 to Tox.
-- `0.1.0`: Molecule quality check for ADME, Toxicity and HTS (canonicalized, and remove error mols).
-- `0.0.9`: Added DrugComb NCI-60, CYP2C9/2D6/3A4 substrates, Carcinogens toxicity! 
-- `0.0.8`: Added hREG, DILI, Skin Reaction, Ames Mutagenicity, PPBR from AstraZeneca; added meta oracles!
-
-</details>
-
-
-## Unique Features of TDC
-
-- *Diverse areas of therapeutics development*: TDC covers a wide range of learning tasks, including target discovery, activity screening, efficacy, safety, and manufacturing across biomedical products, including small molecules, antibodies, and vaccines.
-- *Ready-to-use datasets*: TDC is minimally dependent on external packages. Any TDC dataset can be retrieved using only 3 lines of code.
-- *Data functions*: TDC provides extensive data functions, including data evaluators, meaningful data splits, data processors, and molecule generation oracles. 
-- *Leaderboards*: TDC provides benchmarks for fair model comparison and a systematic model development and evaluation.
-- *Open-source initiative*: TDC is an open-source initiative. If you want to get involved, let us know. 
+## Unique Features of PrimeKG
+ 
+- TODO *Diverse areas of therapeutics development*: TDC covers a wide range of learning tasks, including target discovery, activity screening, efficacy, safety, and manufacturing across biomedical products, including small molecules, antibodies, and vaccines.
+- TODO
+- *Ready-to-use datasets*: PrimeKG is minimally dependent on external packages. Our knowledge graph can be retrieved in a ready-to-use format from Harvard Dataverse.
+- *Data functions*: PrimeKG provides extensive data functions, including processors for primary resources and scripts to build an updated knowledge graph.
+- *Open-source initiative*: PrimeKG is an open-source initiative. If you want to get involved, let us know. 
 
 <p align="center"><img src="https://raw.githubusercontent.com/mims-harvard/TDC/master/fig/tdc_overview.png" alt="overview" width="600px" /></p>
 
@@ -81,24 +63,15 @@ conda env create --name PrimeKG --file=environments.yml
 
 ## Tutorials
 
-We provide  tutorials to get started with TDC:
+We provide a tutorial to help you get started with PrimeKG! It will help you load the knowledge graph into ... TODO
 
-| Name  | Description                                             |
-|-------|---------------------------------------------------------|
-| [101](tutorials/TDC_101_Data_Loader.ipynb)   | Introduce TDC Data Loaders                              |
-| [102](tutorials/TDC_102_Data_Functions.ipynb)   | Introduce TDC Data Functions                            |
-| [103.1](tutorials/TDC_103.1_Datasets_Small_Molecules.ipynb) | Walk through TDC Small Molecule Datasets                |
-| [103.2](tutorials/TDC_103.2_Datasets_Biologics.ipynb) | Walk through TDC Biologics Datasets                     |
-| [104](tutorials/TDC_104_ML_Model_DeepPurpose.ipynb)   | Generate 21 ADME ML Predictors with 15 Lines of Code |
-| [105](tutorials/TDC_105_Oracle.ipynb)   | Molecule Generation Oracles                             |
-| [106](tutorials/TDC_106_BenchmarkGroup_Submission_Demo.ipynb)   | Benchmark submission                             |
-| [DGL](tutorials/DGL_User_Group_Demo.ipynb)   | Demo presented at DGL GNN User Group Meeting                             |
-| [U1.1](tutorials/User_Group/UserGroupMeeting_Tianfan.ipynb)   | Demo presented at first TDC User Group Meetup                             |
-| [U1.2](tutorials/User_Group/UserGroupMeeting_Wenhao.ipynb)   | Demo presented at first TDC User Group Meetup                             |
+## Building an updated PrimeKG
 
-## Curating primary data resources
+#### Downloading primary data resources
 
-We provide the scripts used to process all primary data resources and the names of the resulting output files generated by those scripts. We would be happy to share the intermediate processed datasets that were used to create PrimeKG on request. 
+#### Curating primary data resources
+
+We provide the scripts used to process all primary data resources and the names of the resulting output files generated by those scripts. We would be happy to share the intermediate processing datasets that were used to create PrimeKG on request. 
 
 | Database  | Processing scripts       | Expected script output        |
 |-----------|--------------------------|----------------------|
@@ -121,6 +94,15 @@ UBERON | uberon.py | uberon_terms.csv, uberon_rels.csv, uberon_is_a.csv
 UMLS | umls.py, map_umls_mondo.py | umls_mondo.csv
 UMLS | umls.ipynb | umls_def_disorder_2021.csv, umls_def_disease_2021.csv
 
+#### Harmonizing datasets into PrimeKG
+
+The code to harmonize datasets and construct the knowledge graph is available at  \emph{build\_graph.ipynb}. Simply run this jupyter notebook in order to construct the knowledge graph form the outputs of the processing files mentioned above. This script produces all three versions of PrimeKG, `kg_raw.csv`, `kg_giant.csv`, and the complete version  `kg.csv`.
+
+#### Feature extraction
+
+The code required to engineer features can be found at \emph{engineer\_features.ipynb} and \emph{mapping\_mayo.ipynb}.
+
+<!-- 
 ## Design of TDC
 
 TDC has a unique three-tiered hierarchical structure, which to our knowledge, is the first attempt at systematically organizing machine learning for therapeutics. We organize TDC into three distinct *problems*. For each problem, we give a collection *learning tasks*. Finally, for each task, we provide a series of *datasets*.
@@ -137,10 +119,6 @@ The second tier in the TDC structure is organized into learning tasks. Improveme
 
 Finally, in the third tier of TDC, each task is instantiated via multiple datasets. For each dataset, we provide several splits of the dataset into training, validation, and test sets to simulate the type of understanding and generalization (e.g., the model's ability to generalize to entirely unseen compounds or to granularly resolve patient response to a polytherapy) needed for transition into production and clinical implementation.
 
-## PrimeKG Code Overview
-
-The code to harmonize datasets and construct the knowledge graph is available at  \emph{build\_graph.ipynb}. The code required to engineer features can be found at \emph{engineer\_features.ipynb} and \emph{mapping\_mayo.ipynb}.
-
 #### Dataset Splits
 
 To retrieve the training/validation/test dataset split, you could simply type
@@ -150,21 +128,7 @@ data.get_split(seed = 42)
 # {'train': df_train, 'val': df_val, 'test': df_test}
 ```
 You can specify the splitting method, random seed, and split fractions in the function by e.g. `data.get_split(method = 'scaffold', seed = 1, frac = [0.7, 0.1, 0.2])`. Check out the [data split page](https://zitniklab.hms.harvard.edu/TDC/functions/data_split/) on the website for details.
-
-#### Strategies for Model Evaluation
-
-We provide various evaluation metrics for the tasks in TDC, which are described in [model evaluation page](https://zitniklab.hms.harvard.edu/TDC/functions/data_evaluation/) on the website. For example, to use metric ROC-AUC, you could simply type
-
-```python
-from tdc import Evaluator
-evaluator = Evaluator(name = 'ROC-AUC')
-score = evaluator(y_true, y_pred)
-```
-
-#### Data Processing 
-
-TDC provides numerous data processing functions, including label transformation, data balancing, pair data to PyG/DGL graphs, negative sampling, database querying and so on. For function usage, see our [data processing page](https://zitniklab.hms.harvard.edu/TDC/functions/data_process/) on the TDC website.
-
+-->
 ## Cite Us
 
 If you find PrimeKG useful, cite our arxiv paper: TODO
