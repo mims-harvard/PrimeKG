@@ -1,17 +1,14 @@
 # PrimeKG
 ----
-<!-- 
-[![website](https://img.shields.io/badge/website-live-brightgreen)](TODO_add_url_here)
+
+[![website](https://img.shields.io/badge/website-live-brightgreen)](https://zitniklab.hms.harvard.edu/projects/PrimeKG/)
 [![GitHub Repo stars](https://img.shields.io/github/stars/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/stargazers)
 [![GitHub Repo stars](https://img.shields.io/github/forks/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-[**Website**](TODO_add_url_here) | [**Arxiv Paper**](TODO_add_url_here) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
+[**Website**](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) | [**Arxiv Paper**](TODO_add_url_here) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
 
-**Precision Medicine Knowledge Graph (PrimeKG)** TODO is the first unifying framework to systematically access, evaluate, and benchmark machine learning methods across the entire range of therapeutics. TDC supports the development of novel ML methods and theory, with a strong bent towards developing the foundations of which ML algorithms are most suitable for drug discovery applications and why.
-
-The collection of curated AI/ML-ready datasets, AI/ML tasks, and benchmarks in TDC serves as a meeting point for domain and machine learning scientists. We envision that TDC can considerably accelerate ML model development, validation and transition into biomedical and clinical implementation.
- -->
+**Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales, considerably expanding previous efforts in disease-rooted knowledge graphs. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multimodal analyses.
  
 <!-- 
 **Invited talk at the [Harvard Symposium on Drugs for Future Pandemics (#futuretx20)](https://www.drugsymposium.org/)** [**\[Slides\]**](https://drive.google.com/file/d/11eTrh_lsqPcwu3RZRYjJGNpJ3s18YlBS/view) [**\[Video\]**](https://youtu.be/ZuCOhEZtaOw)
