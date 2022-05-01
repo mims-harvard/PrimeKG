@@ -1,6 +1,6 @@
 # PrimeKG
 ----
-
+<!-- 
 [![website](https://img.shields.io/badge/website-live-brightgreen)](TODO_add_url_here)
 [![GitHub Repo stars](https://img.shields.io/github/stars/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/stargazers)
 [![GitHub Repo stars](https://img.shields.io/github/forks/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/network/members)
@@ -11,7 +11,8 @@
 **Precision Medicine Knowledge Graph (PrimeKG)** TODO is the first unifying framework to systematically access, evaluate, and benchmark machine learning methods across the entire range of therapeutics. TDC supports the development of novel ML methods and theory, with a strong bent towards developing the foundations of which ML algorithms are most suitable for drug discovery applications and why.
 
 The collection of curated AI/ML-ready datasets, AI/ML tasks, and benchmarks in TDC serves as a meeting point for domain and machine learning scientists. We envision that TDC can considerably accelerate ML model development, validation and transition into biomedical and clinical implementation.
-
+ -->
+ 
 <!-- 
 **Invited talk at the [Harvard Symposium on Drugs for Future Pandemics (#futuretx20)](https://www.drugsymposium.org/)** [**\[Slides\]**](https://drive.google.com/file/d/11eTrh_lsqPcwu3RZRYjJGNpJ3s18YlBS/view) [**\[Video\]**](https://youtu.be/ZuCOhEZtaOw)
 
@@ -35,6 +36,7 @@ The collection of curated AI/ML-ready datasets, AI/ML tasks, and benchmarks in T
  -->
 - PrimeKG is live on [arXiv](https://arxiv.org/abs/2102.09548) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
 
+<!-- 
 ## Unique Features of PrimeKG
  
 - TODO *Diverse areas of therapeutics development*: TDC covers a wide range of learning tasks, including target discovery, activity screening, efficacy, safety, and manufacturing across biomedical products, including small molecules, antibodies, and vaccines.
