@@ -3,7 +3,7 @@
 
 [![website](https://img.shields.io/badge/website-live-brightgreen)](https://zitniklab.hms.harvard.edu/projects/PrimeKG/)
 [![GitHub Repo stars](https://img.shields.io/github/stars/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/stargazers)
-[![GitHub Repo stars](https://img.shields.io/github/forks/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/network/members)
+[![GitHub Repo forks](https://img.shields.io/github/forks/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 [**Website**](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) | [**Arxiv Paper**](TODO_add_url_here) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
@@ -31,16 +31,16 @@
 - `0.1.9`: Support molecule filters! Checkout [here](https://tdcommons.ai//functions/data_process/#molecule-filters)!
 - `0.1.8`: Streamlined and simplified the leaderboard programming frameworks! Now, you can submit a result for a single dataset! Checkout [here](https://tdcommons.ai/benchmark/overview/)!
  -->
-- PrimeKG is live on [arXiv](https://arxiv.org/abs/2102.09548) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
+- PrimeKG is live on [arXiv](TODO_add_url_here) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
 
-<!-- 
+
 ## Unique Features of PrimeKG
  
-- TODO *Diverse areas of therapeutics development*: TDC covers a wide range of learning tasks, including target discovery, activity screening, efficacy, safety, and manufacturing across biomedical products, including small molecules, antibodies, and vaccines.
-- TODO
+- *Diverse coverage of diseases*: PrimeKG contains over 17,000 diseases including rare dieases. Disease nodes in PrimeKG are densely connected to other nodes in the graph and have been optimized for clinical relevance in downstream precision medicine tasks. 
+- *Heterogeneous knowledge graph*: PrimeKG contains over 100,000 nodes distributed over various biological scales as depicted below. PrimeKG also contains over 4 million relationships between these nodes distributed over 29 types of edges.
+- *Multimodal integration of clinical knowledge*: Disease and drug nodes in PrimeKG are augmented with clinical descriptors that come from medical authorities such as Mayo Clinic, Orphanet, Drug Bank, and so forth. 
 - *Ready-to-use datasets*: PrimeKG is minimally dependent on external packages. Our knowledge graph can be retrieved in a ready-to-use format from Harvard Dataverse.
 - *Data functions*: PrimeKG provides extensive data functions, including processors for primary resources and scripts to build an updated knowledge graph.
-- *Open-source initiative*: PrimeKG is an open-source initiative. If you want to get involved, let us know. 
 
 <p align="center"><img src="https://github.com/mims-harvard/PrimeKG/blob/main/fig/schematic.png" alt="overview" width="600px" /></p>
 
@@ -60,13 +60,16 @@ pip install -r requirements.txt
 conda env create --name PrimeKG --file=environments.yml
 ```
 
+<!-- 
 ## Tutorials
 
 We provide a tutorial to help you get started with PrimeKG! It will help you load the knowledge graph into ... TODO
-
+ -->
 ## Building an updated PrimeKG
 
 #### Downloading primary data resources
+
+All persistent identifiers and weblinks to download the 20 primary data resources used to build PrimeKG are systematically provided in the Data Records section of our article. We have also mentioned the exact filenames that were downloaded from each resource for easy corroboration. 
 
 #### Curating primary data resources
 
@@ -95,29 +98,13 @@ UMLS | umls.ipynb | umls_def_disorder_2021.csv, umls_def_disease_2021.csv
 
 #### Harmonizing datasets into PrimeKG
 
-The code to harmonize datasets and construct the knowledge graph is available at  \emph{build\_graph.ipynb}. Simply run this jupyter notebook in order to construct the knowledge graph form the outputs of the processing files mentioned above. This script produces all three versions of PrimeKG, `kg_raw.csv`, `kg_giant.csv`, and the complete version  `kg.csv`.
+The code to harmonize datasets and construct PrimeKG is available at `build_graph.ipynb`. Simply run this jupyter notebook in order to construct the knowledge graph form the outputs of the processing files mentioned above. This jupyter notebook produces all three versions of PrimeKG, `kg_raw.csv`, `kg_giant.csv`, and the complete version  `kg.csv`. 
 
 #### Feature extraction
 
-The code required to engineer features can be found at \emph{engineer\_features.ipynb} and \emph{mapping\_mayo.ipynb}.
+The code required to engineer features can be found at `engineer_features.ipynb` and `mapping_mayo.ipynb`. 
 
 <!-- 
-## Design of TDC
-
-TDC has a unique three-tiered hierarchical structure, which to our knowledge, is the first attempt at systematically organizing machine learning for therapeutics. We organize TDC into three distinct *problems*. For each problem, we give a collection *learning tasks*. Finally, for each task, we provide a series of *datasets*.
-
-In the first tier, after observing a large set of therapeutics tasks, we categorize and abstract out three major areas (i.e., problems) where machine learning can facilitate scientific advances, namely, single-instance prediction, multi-instance prediction, and generation:
-
-* Single-instance prediction `single_pred`: Prediction of property given individual biomedical entity.
-* Multi-instance prediction `multi_pred`: Prediction of property given multiple biomedical entities. 
-* Generation `generation`: Generation of new desirable biomedical entities.
-
-<p align="center"><img src="https://raw.githubusercontent.com/mims-harvard/TDC/master/fig/tdc_problems.png" alt="problems" width="500px" /></p>
-
-The second tier in the TDC structure is organized into learning tasks. Improvement on these tasks can result in numerous applications, including identifying personalized combinatorial therapies, designing novel class of antibodies, improving disease diagnosis, and finding new cures for emerging diseases.
-
-Finally, in the third tier of TDC, each task is instantiated via multiple datasets. For each dataset, we provide several splits of the dataset into training, validation, and test sets to simulate the type of understanding and generalization (e.g., the model's ability to generalize to entirely unseen compounds or to granularly resolve patient response to a polytherapy) needed for transition into production and clinical implementation.
-
 #### Dataset Splits
 
 To retrieve the training/validation/test dataset split, you could simply type
@@ -128,6 +115,7 @@ data.get_split(seed = 42)
 ```
 You can specify the splitting method, random seed, and split fractions in the function by e.g. `data.get_split(method = 'scaffold', seed = 1, frac = [0.7, 0.1, 0.2])`. Check out the [data split page](https://zitniklab.hms.harvard.edu/TDC/functions/data_split/) on the website for details.
 -->
+
 ## Cite Us
 
 If you find PrimeKG useful, cite our arxiv paper: TODO
