@@ -6,7 +6,7 @@
 [![GitHub Repo forks](https://img.shields.io/github/forks/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-[**Website**](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) | [**bioRxiv Paper**](TODO_add_url_here) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
+[**Website**](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) | [**bioRxiv Paper**](https://www.biorxiv.org/content/10.1101/2022.05.01.489928v1) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
 
 **Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales, considerably expanding previous efforts in disease-rooted knowledge graphs. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multimodal analyses.
  
@@ -31,7 +31,7 @@
 - `0.1.9`: Support molecule filters! Checkout [here](https://tdcommons.ai//functions/data_process/#molecule-filters)!
 - `0.1.8`: Streamlined and simplified the leaderboard programming frameworks! Now, you can submit a result for a single dataset! Checkout [here](https://tdcommons.ai/benchmark/overview/)!
  -->
-- PrimeKG is live on [bioRxiv](TODO_add_url_here) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
+- PrimeKG is live on [bioRxiv](https://www.biorxiv.org/content/10.1101/2022.05.01.489928v1) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
 
 
 ## Unique Features of PrimeKG
@@ -124,10 +124,9 @@ If you find PrimeKG useful, cite our work:
 @article{chandak2022building,
   title={Building a knowledge graph to enable precision medicine},
   author={Chandak, Payal and Huang, Kexin and Zitnik, Marinka},
-  journal={In Review},
-  volume={},
-  number={},
-  pages={},
+  journal={bioRxiv},
+  doi={10.1101/2022.05.01.489928},
+  URL={https://www.biorxiv.org/content/early/2022/05/01/2022.05.01.489928},
   year={2022}
 }
 ```
