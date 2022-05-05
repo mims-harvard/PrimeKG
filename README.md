@@ -44,6 +44,8 @@
 
 <p align="center"><img src="https://github.com/mims-harvard/PrimeKG/blob/main/fig/schematic.png" alt="overview" width="600px" /></p>
 
+<p align="center"><img src="https://github.com/mims-harvard/PrimeKG/blob/main/fig/PrimeKG-example.png" alt="PrimeKG-example"/></p>
+
 ## Environment setup
 
 ### Using `pip`
@@ -133,7 +135,7 @@ If you find PrimeKG useful, cite our work:
 
 ## Data Server
 
-PrimeKG is hosted on [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/21LKWG) with the following persistent identifier [https://doi.org/10.7910/DVN/IXA7BM](https://doi.org/10.7910/DVN/IXA7BM). When Dataverse is under maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please check the status on [the Dataverse website](https://dataverse.harvard.edu/).
+PrimeKG is hosted on [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM) with the following persistent identifier [https://doi.org/10.7910/DVN/IXA7BM](https://doi.org/10.7910/DVN/IXA7BM). When Dataverse is under maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please check the status on [the Dataverse website](https://dataverse.harvard.edu/).
 
 ## License
 PrimeKG codebase is under MIT license. For individual dataset usage, please refer to the dataset license found in the website.
