@@ -100,7 +100,7 @@ UMLS | umls.ipynb | umls_def_disorder_2021.csv, umls_def_disease_2021.csv
 
 #### Harmonizing datasets into PrimeKG
 
-The code to harmonize datasets and construct PrimeKG is available at `build_graph.ipynb`. Simply run this jupyter notebook in order to construct the knowledge graph form the outputs of the processing files mentioned above. This jupyter notebook produces all three versions of PrimeKG, `kg_raw.csv`, `kg_giant.csv`, and the complete version  `kg.csv`. 
+The code to harmonize datasets and construct PrimeKG is available at `build_graph.ipynb`. Simply run this jupyter notebook in order to construct the knowledge graph from the outputs of the processing files mentioned above. This jupyter notebook produces all three versions of PrimeKG, `kg_raw.csv`, `kg_giant.csv`, and the complete version  `kg.csv`. 
 
 #### Feature extraction
 
