@@ -62,11 +62,12 @@ pip install -r requirements.txt
 conda env create --name PrimeKG --file=environments.yml
 ```
 
-<!-- 
-## Tutorials
+## Loading PrimeKG and Tutorials
 
-We provide a tutorial to help you get started with PrimeKG! It will help you load the knowledge graph into ... TODO
- -->
+For a quick start in Python, you can load PrimeKG using the following dataloaders. You are also welcome to download the raw data files from [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM).
+- TDC
+- PyKeen
+
 ## Building an updated PrimeKG
 
 #### Downloading primary data resources
