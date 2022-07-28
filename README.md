@@ -8,7 +8,7 @@
 
 [**Website**](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) | [**bioRxiv Paper**](https://www.biorxiv.org/content/10.1101/2022.05.01.489928v1) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
 
-**Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales, considerably expanding previous efforts in disease-rooted knowledge graphs. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multimodal analyses.
+**Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multimodal analyses.
  
 <!-- 
 **Invited talk at the [Harvard Symposium on Drugs for Future Pandemics (#futuretx20)](https://www.drugsymposium.org/)** [**\[Slides\]**](https://drive.google.com/file/d/11eTrh_lsqPcwu3RZRYjJGNpJ3s18YlBS/view) [**\[Video\]**](https://youtu.be/ZuCOhEZtaOw)
