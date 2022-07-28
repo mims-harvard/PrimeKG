@@ -66,7 +66,8 @@ conda env create --name PrimeKG --file=environments.yml
 
 For a quick start in Python, you can load PrimeKG using the following dataloaders. You are also welcome to download the raw data files in `.csv` format directly from [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM).
 
-TDC [[docs]](https://github.com/mims-harvard/TDC)
+### Therapeutics Data Commons 
+[website](https://tdcommons.ai) | [docs](https://github.com/mims-harvard/TDC)
 ```bash
 pip install PyTDC
 ```
@@ -77,7 +78,8 @@ drug_feature = data.get_features(feature_type = 'drug')
 data.to_nx()
 data.get_node_list(type = 'disease')
 ```
-PyKEEN [[docs]](https://pykeen.readthedocs.io/en/latest/api/pykeen.datasets.PrimeKG.html)
+### PyKEEN 
+[website](https://github.com/pykeen/pykeen) | [docs](https://pykeen.readthedocs.io/en/latest/api/pykeen.datasets.PrimeKG.html)
 ```
 pip install pykeen
 ```
