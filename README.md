@@ -63,11 +63,24 @@ pip install -r requirements.txt
 conda env create --name PrimeKG --file=environments.yml
 ```
 
-## Getting started with PrimeKG
+## Using PrimeKG
 
-For a quick start in Python, you can load PrimeKG using the following dataloaders. You are also welcome to download the raw data files in `.csv` format directly from [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM).
+For a quick start in Python, you can download the raw data files in `.csv` format directly from [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM) or load PrimeKG using the following community dataloaders.
 
-### Therapeutics Data Commons 
+### Getting started in Python
+
+Download PrimeKG from Harvard Dataverse using the following bash command. You can replace `kg.csv` with any file path. 
+```bash
+wget -O kg.csv https://dataverse.harvard.edu/api/access/datafile/6180620
+```
+You can use the following code to load PrimeKG and visualize its data. 
+```python
+import pandas as pd
+primekg = pd.read_csv('kg.csv', low_memory=False)
+primekg.query('node_type=="disease"')
+```
+
+### Dataloader: Therapeutics Data Commons 
 [website](https://tdcommons.ai) | [docs](https://github.com/mims-harvard/TDC)
 ```bash
 pip install PyTDC
@@ -79,7 +92,7 @@ drug_feature = data.get_features(feature_type = 'drug')
 data.to_nx()
 data.get_node_list(type = 'disease')
 ```
-### PyKEEN 
+### Dataloader: PyKEEN 
 [website](https://github.com/pykeen/pykeen) | [docs](https://pykeen.readthedocs.io/en/latest/api/pykeen.datasets.PrimeKG.html)
 ```
 pip install pykeen
