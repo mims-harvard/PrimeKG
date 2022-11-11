@@ -6,7 +6,7 @@
 [![GitHub Repo forks](https://img.shields.io/github/forks/mims-harvard/PrimeKG)](https://github.com/mims-harvard/PrimeKG/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-[**Website**](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) | [**bioRxiv Preprint**](https://www.biorxiv.org/content/10.1101/2022.05.01.489928v1) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
+[**Website**](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) | [**Preprint**](https://www.biorxiv.org/content/10.1101/2022.05.01.489928v1) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
 
 **Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multimodal analyses.
  
