@@ -79,7 +79,7 @@ You can use the following code to load PrimeKG and visualize its data.
 ```python
 import pandas as pd
 primekg = pd.read_csv('kg.csv', low_memory=False)
-primekg.query('node_type=="disease"')
+primekg.query('y_type=="disease"|x_type=="disease"')
 ```
 
 ### Dataloader: Therapeutics Data Commons 
