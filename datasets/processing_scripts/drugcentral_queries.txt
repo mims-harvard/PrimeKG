@@ -1,5 +1,6 @@
 createdb drugcentral
-psql drugcentral < drugcentral-pgdump_20200918.sql
+# updated PrimeKG: updating DrugCentral version to 2023-05-10
+psql drugcentral < drugcentral.dump.05102023.sql
 
 select distinct * from structures
 right join

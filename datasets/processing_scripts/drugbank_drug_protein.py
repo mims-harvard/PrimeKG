@@ -9,8 +9,8 @@ df_transporter = pd.read_csv('../data/drugbank/drugbank_all_transporter_polypept
 gene_vocab = pd.read_csv('../data/vocab/gene_map.csv', delimiter='\t')
 db_vocab = pd.read_csv('../data/vocab/drugbank_vocabulary.csv')
 
-up2ncbi = gene_vocab.get(['NCBI Gene ID(supplied by NCBI)', 'UniProt ID(supplied by UniProt)']).dropna()                    .set_index('UniProt ID(supplied by UniProt)').to_dict()['NCBI Gene ID(supplied by NCBI)']
-ncbi2up = gene_vocab.get(['NCBI Gene ID(supplied by NCBI)', 'UniProt ID(supplied by UniProt)']).dropna()                    .set_index('NCBI Gene ID(supplied by NCBI)').to_dict()['UniProt ID(supplied by UniProt)']
+up2ncbi = gene_vocab.get(['NCBI Gene ID(supplied by NCBI)', 'UniProt ID(supplied by UniProt)']).dropna().set_index('UniProt ID(supplied by UniProt)').to_dict()['NCBI Gene ID(supplied by NCBI)']
+ncbi2up = gene_vocab.get(['NCBI Gene ID(supplied by NCBI)', 'UniProt ID(supplied by UniProt)']).dropna().set_index('NCBI Gene ID(supplied by NCBI)').to_dict()['UniProt ID(supplied by UniProt)']
 dbid2name = db_vocab.get(['DrugBank ID', 'Common name']).dropna().set_index('DrugBank ID').to_dict()['Common name']
 
 def add_col(df, dct, source, sink):

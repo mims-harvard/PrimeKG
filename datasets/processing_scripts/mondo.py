@@ -26,8 +26,9 @@ mondo_xrefs = []
 for x in data: 
     if x.xrefs:
         for xref in x.xrefs: 
-            ont, name = xref.split(':')            
-            mondo_xrefs.append({'ontology_id':name, 'ontology':ont, 'mondo_id':x.item_id})           
+            if xref is not None:
+                ont, name = xref.split(':')            
+                mondo_xrefs.append({'ontology_id':name, 'ontology':ont, 'mondo_id':x.item_id})            
 mondo_xrefs = pd.DataFrame(mondo_xrefs).drop_duplicates()
 print('references to the following ontologies are available:')
 print(np.unique(mondo_xrefs.get('ontology').values))

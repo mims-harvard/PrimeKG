@@ -1,0 +1,19 @@
+proj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+*/.DS_Store
+
+# ignore Python cache
+__pycache__
+.ipynb_checkpoints
+
+# ignore virtual environment
+# to activate, run source primeKG/bin/activate
+primeKG_env/
+
+# ignore data files
+datasets/data/
+datasets/feature_extraction/drug/drug_bank/parsed/
+datasets/processing_scripts/test.ipynb
