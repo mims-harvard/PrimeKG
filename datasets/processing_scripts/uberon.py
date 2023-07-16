@@ -25,6 +25,8 @@ relations = pd.DataFrame(relations, columns=['relation_type','relation_id'])
 df = pd.concat([data, relations], axis=1)
 df = df.query('is_obsolete!="true"')
 df = df.drop(['is_obsolete', 'replaced_by', 'consider', 'created_by', 'creation_date'], axis=1)
+# updated PrimeKG: drop two obsolete terms, UBERON:0039300 and UBERON:0039302 (not marked as obsolete in OBO file) 
+df = df.dropna(subset=['is_a'])
 df = df[df.get('id').str.startswith('UBERON')]
 df = df.reset_index().drop('index', axis=1)
 

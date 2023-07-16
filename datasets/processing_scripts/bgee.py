@@ -19,6 +19,9 @@ df = df.rename(columns={'Gene ID':'gene_id',
 df = df.query('call_quality=="gold quality"')
 df = df.query('expression_rank<25000')
 
+# updated PrimeKG: remove rows that specify cell type within a particular tissue
+df = df[~df['anatomy_id'].str.contains("∩")]
+
 df.loc[:, 'anatomy_id'] = [str(int(x.split(':')[1])) for x in df.get(['anatomy_id']).values.reshape(-1)]
 df.to_csv('../data/bgee/anatomy_gene.csv', index=False)
 

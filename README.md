@@ -11,27 +11,8 @@
 ## TL;DR
 **Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multimodal analyses. Download [this csv file](https://dataverse.harvard.edu/api/access/datafile/6180620) to get started!
  
-<!-- 
-**Invited talk at the [Harvard Symposium on Drugs for Future Pandemics (#futuretx20)](https://www.drugsymposium.org/)** [**\[Slides\]**](https://drive.google.com/file/d/11eTrh_lsqPcwu3RZRYjJGNpJ3s18YlBS/view) [**\[Video\]**](https://youtu.be/ZuCOhEZtaOw)
-
-**Presented at [NeurIPS 2021](https://openreview.net/forum?id=8nvgnORnoWr)** [**\[Poster\]**](https://drive.google.com/file/d/1LfF8mfPLUqAVEzH3KPBxDO_VF7nLFtiJ/view?usp=sharing) / **Oral at [ELLIS ML4Molecules](https://moleculediscovery.github.io/workshop2021/)** [**\[Slides\]**](https://drive.google.com/file/d/1iOSW_5eruca4vdygDxS1H64c49oQuH40/view?usp=sharing) / **Presented at [Baylearn](https://baylearn-org.github.io/www/)** [**\[Slides\]**](https://drive.google.com/file/d/1BNpk3dOdqE3ksgyVV-V3xySdBMq-8cXL/view?usp=sharing) [**\[Poster\]**](https://drive.google.com/file/d/1LfF8mfPLUqAVEzH3KPBxDO_VF7nLFtiJ/view?usp=sharing)
-
-**[Recording of the first TDC User Group Meetup](https://harvard.zoom.us/rec/share/HO0TjRPs56YG-Fu3i033izaTwebB4KwUhPeNURkWSI-anrH9su03lCtUlHeZG-WP.67ZJmAIHsD7Q_2GQ) (Jan 25th, 2022). [Agenda](https://shoutout.wix.com/so/d1Nv1pC2d#/main)**
- -->
- 
 ## Updates
-<!-- 
-- `0.3.6`: Add a new task on TCR-Epitope Binding! See [here](https://tdcommons.ai/multi_pred_tasks/tcrepitope/)!
-- `0.3.5`: 1. Add hERG central dataset 2. Add ChEMBL V29 3. Fixed reaction type issue for USPTO-50 4. Fix bug on higher order multi-instance prediction cold-split! More information, see [here](https://tdcommons.ai/news/)!
-- `0.3.4`: Bug fixes on docking oracles, KL divergence measure, see commit [0f7121a](https://github.com/mims-harvard/TDC/commit/0f7121a3bd7cb833fb55441054d7d87ff3c4ebd6) and commit [6e46fbd](https://github.com/mims-harvard/TDC/commit/6e46fbd1a946b3a6b9f7ba456d60dc09480c68b9)!
-- `0.3.3`: Extended support on cold split - now you can split based on multiple entities, see [#127](https://github.com/mims-harvard/TDC/pull/127)!
-- `0.3.2`: Bug fixes - Adding support for harmonizing same DTIs with different affinities (KIBA, DAVIS Updated accordingly, see [#98](https://github.com/mims-harvard/TDC/issues/98)). Support label name retrieval for TWOSIDES ([#121](https://github.com/mims-harvard/TDC/issues/121)), and add gene symbol info to GDSC ([#12t2](https://github.com/mims-harvard/TDC/issues/122)). 
-- `0.3.1`: We have restructured the codebase to be contributor-friendly! Checkout the TDC documentation at [https://tdc.readthedocs.io](https://tdc.readthedocs.io/)!
-- TDC paper is accepted to [NeurIPS 2021 Datasets and Benchmarks](https://openreview.net/pdf?id=8nvgnORnoWr)
-- `0.2.0`: Release docking molecule generation benchmark! Checkout [here](https://tdcommons.ai/benchmark/docking_group/overview/)!
-- `0.1.9`: Support molecule filters! Checkout [here](https://tdcommons.ai//functions/data_process/#molecule-filters)!
-- `0.1.8`: Streamlined and simplified the leaderboard programming frameworks! Now, you can submit a result for a single dataset! Checkout [here](https://tdcommons.ai/benchmark/overview/)!
- -->
+- [July 2023] PrimeKG construction scripts are updated to include primary source data releases up to July 2023. Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG. For more details, please see the relevant section below.
 - [Feb 2023] PrimeKG is [published](https://www.nature.com/articles/s41597-023-01960-3) in Nature Scientific Data. 
 - [Jun 2022] PrimeKG crosses 5,000 downloads on Harvard Dataverse! 
 - [Apr 2022] PrimeKG is live on [bioRxiv](https://www.biorxiv.org/content/10.1101/2022.05.01.489928v1) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
@@ -142,6 +123,67 @@ The code to harmonize datasets and construct PrimeKG is available at `build_grap
 ### Feature extraction
 
 The code required to engineer features can be found at `engineer_features.ipynb` and `mapping_mayo.ipynb`. 
+
+### July 2023 update
+
+In July 2023, this repository was updated to rebuild PrimeKG and update the knowledge graph to include database releases up to July 2023.Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG. For more details, see [this pull request](https://github.com/mims-harvard/PrimeKG/pull/11).
+
+17 scripts `datasets/processing_scripts/` are re-run or updated to build a new version of PrimeKG, while `datasets/feature_construction/` scripts may remain out-of-date. Re-run or updated primary data sources include Bgee, Comparative Toxicogenomics Database, DisGeNET, DrugBank, DrugCentral, NCBI Gene, Gene Ontology, Human Phenotype Ontology, MONDO, Reactome, SIDER, UBERON, and UMLS. 
+
+For more information, see `datasets/primary_data_resources.sh`. Changes include the following:
+
+#### General
+Created script to automatically create directory structure, pull data, and run all necessary processing and feature extraction steps.
+* Fixed broken environment construction script.
+* Script automatically creates required directories.
+* Added commands to retrieve gene names, details, and NCBI ID to UniProt ID mapping from [www.genenames.org](http://www.genenames.org/), then output to `vocab/gene_names.csv` and `vocab/gene_map.csv`.
+
+
+#### Bgee
+* 58405/5257181 gold quality calls with expression rank < 25000 now specify cell type in a particular tissue (_e.g._, UBERON:0000473 ∩ CL:0000089, which denotes germ line stem cell in testis).
+* These rows are dropped in `bgee.py`.
+* URL updated to [here](https://www.bgee.org/ftp/current/download/calls/expr_calls/Homo_sapiens_expr_advanced.tsv.gz).
+
+#### Comparative Toxicogenomics Database
+* URL updated to [here](https://ctdbase.org/reports/CTD_exposure_events.csv.gz).
+
+#### DisGeNET
+* No changes needed.
+
+#### DrugBank
+* Fixed paths in `parsexml_drugbank.py`. Output to new `/parsed` subdirectory. Removed extraneous lines in `Parsed_feature.ipynb`.
+* :white_check_mark: Successfully ran `drugbank_drug_drug.py` and `drugbank_drug_protein.py`.
+* :warning: `parsexml_drugbank.py` and `Parsed_feature.ipynb` may need updates.
+
+#### DrugCentral
+* Modified `drugcentral_queries.txt` to work on O2, the Harvard Medical School high-performance computing cluster.
+* :warning:  `drugcentral_feature.Rmd` may need updates.
+
+#### NCBI Gene
+* No changes needed.
+
+#### Gene Ontology
+* Used `-L` flag to follow redirects. No other changes needed.
+
+#### Human Phenotype Ontology
+* Used `-L` flag to follow redirects. No other changes needed to `hpo.py`.
+* Updated `hpoa.py` to replace old column names with new column names.
+
+#### MONDO
+* Added check for NoneType values in external references (line 29).
+
+#### Reactome
+* No changes needed.
+
+#### SIDER
+* No changes needed.
+
+#### UBERON
+* Checked for NA values, dropped two obsolete terms (UBERON:0039300 and UBERON:0039302) not marked as obsolete in the source file.
+
+#### UMLS
+* UMLS data pulled and  paths updated for 2023 data.
+* :warning: `umls.ipynb` may need updates.
 
 ## Cite Us
 
