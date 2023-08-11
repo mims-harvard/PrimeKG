@@ -13,67 +13,69 @@
  
 ## Updates
 - [July 2023] PrimeKG construction scripts are updated to include primary source data releases up to July 2023. Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG.
-    <details>
-      <summary>Details:</summary>
-        
-        In July 2023, this repository was updated to rebuild PrimeKG and update the knowledge graph to include database releases up to July 2023.Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG. For more details, see [this pull request](https://github.com/mims-harvard/PrimeKG/pull/11).
-        
-        17 scripts `datasets/processing_scripts/` are re-run or updated to build a new version of PrimeKG, while `datasets/feature_construction/` scripts may remain out-of-date. Re-run or updated primary data sources include Bgee, Comparative Toxicogenomics Database, DisGeNET, DrugBank, DrugCentral, NCBI Gene, Gene Ontology, Human Phenotype Ontology, MONDO, Reactome, SIDER, UBERON, and UMLS. 
-        
-        For more information, see `datasets/primary_data_resources.sh`. Changes include the following:
-        
-        #### General
-        Created script to automatically create directory structure, pull data, and run all necessary processing and feature extraction steps.
-        * Fixed broken environment construction script.
-        * Script automatically creates required directories.
-        * Added commands to retrieve gene names, details, and NCBI ID to UniProt ID mapping from [www.genenames.org](http://www.genenames.org/), then output to `vocab/gene_names.csv` and `vocab/gene_map.csv`.
+    <details><summary>details:</summary>
+
+    ### July 2023 update
     
-        #### Bgee
-        * 58405/5257181 gold quality calls with expression rank < 25000 now specify cell type in a particular tissue (_e.g._, UBERON:0000473 ∩ CL:0000089, which denotes germ line stem cell in testis).
-        * These rows are dropped in `bgee.py`.
-        * URL updated to [here](https://www.bgee.org/ftp/current/download/calls/expr_calls/Homo_sapiens_expr_advanced.tsv.gz).
-        
-        #### Comparative Toxicogenomics Database
-        * URL updated to [here](https://ctdbase.org/reports/CTD_exposure_events.csv.gz).
-        
-        #### DisGeNET
-        * No changes needed.
-        
-        #### DrugBank
-        * Fixed paths in `parsexml_drugbank.py`. Output to new `/parsed` subdirectory. Removed extraneous lines in `Parsed_feature.ipynb`.
-        * :white_check_mark: Successfully ran `drugbank_drug_drug.py` and `drugbank_drug_protein.py`.
-        * :warning: `parsexml_drugbank.py` and `Parsed_feature.ipynb` may need updates.
-        
-        #### DrugCentral
-        * Modified `drugcentral_queries.txt` to work on O2, the Harvard Medical School high-performance computing cluster.
-        * :warning:  `drugcentral_feature.Rmd` may need updates.
-        
-        #### NCBI Gene
-        * No changes needed.
-        
-        #### Gene Ontology
-        * Used `-L` flag to follow redirects. No other changes needed.
-        
-        #### Human Phenotype Ontology
-        * Used `-L` flag to follow redirects. No other changes needed to `hpo.py`.
-        * Updated `hpoa.py` to replace old column names with new column names.
-        
-        #### MONDO
-        * Added check for NoneType values in external references (line 29).
-        
-        #### Reactome
-        * No changes needed.
-        
-        #### SIDER
-        * No changes needed.
-        
-        #### UBERON
-        * Checked for NA values, dropped two obsolete terms (UBERON:0039300 and UBERON:0039302) not marked as obsolete in the source file.
-        
-        #### UMLS
-        * UMLS data pulled and  paths updated for 2023 data.
-        * :warning: `umls.ipynb` may need updates.
+    In July 2023, this repository was updated to rebuild PrimeKG and update the knowledge graph to include database releases up to July 2023.Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG. For more details, see [this pull request](https://github.com/mims-harvard/PrimeKG/pull/11).
+    
+    17 scripts `datasets/processing_scripts/` are re-run or updated to build a new version of PrimeKG, while `datasets/feature_construction/` scripts may remain out-of-date. Re-run or updated primary data sources include Bgee, Comparative Toxicogenomics Database, DisGeNET, DrugBank, DrugCentral, NCBI Gene, Gene Ontology, Human Phenotype Ontology, MONDO, Reactome, SIDER, UBERON, and UMLS. 
+    
+    For more information, see `datasets/primary_data_resources.sh`. Changes include the following:
+    
+    #### General
+    Created script to automatically create directory structure, pull data, and run all necessary processing and feature extraction steps.
+    * Fixed broken environment construction script.
+    * Script automatically creates required directories.
+    * Added commands to retrieve gene names, details, and NCBI ID to UniProt ID mapping from [www.genenames.org](http://www.genenames.org/), then output to `vocab/gene_names.csv` and `vocab/gene_map.csv`.
+
+    #### Bgee
+    * 58405/5257181 gold quality calls with expression rank < 25000 now specify cell type in a particular tissue (_e.g._, UBERON:0000473 ∩ CL:0000089, which denotes germ line stem cell in testis).
+    * These rows are dropped in `bgee.py`.
+    * URL updated to [here](https://www.bgee.org/ftp/current/download/calls/expr_calls/Homo_sapiens_expr_advanced.tsv.gz).
+    
+    #### Comparative Toxicogenomics Database
+    * URL updated to [here](https://ctdbase.org/reports/CTD_exposure_events.csv.gz).
+    
+    #### DisGeNET
+    * No changes needed.
+    
+    #### DrugBank
+    * Fixed paths in `parsexml_drugbank.py`. Output to new `/parsed` subdirectory. Removed extraneous lines in `Parsed_feature.ipynb`.
+    * :white_check_mark: Successfully ran `drugbank_drug_drug.py` and `drugbank_drug_protein.py`.
+    * :warning: `parsexml_drugbank.py` and `Parsed_feature.ipynb` may need updates.
+    
+    #### DrugCentral
+    * Modified `drugcentral_queries.txt` to work on O2, the Harvard Medical School high-performance computing cluster.
+    * :warning:  `drugcentral_feature.Rmd` may need updates.
+    
+    #### NCBI Gene
+    * No changes needed.
+    
+    #### Gene Ontology
+    * Used `-L` flag to follow redirects. No other changes needed.
+    
+    #### Human Phenotype Ontology
+    * Used `-L` flag to follow redirects. No other changes needed to `hpo.py`.
+    * Updated `hpoa.py` to replace old column names with new column names.
+    
+    #### MONDO
+    * Added check for NoneType values in external references (line 29).
+    
+    #### Reactome
+    * No changes needed.
+    
+    #### SIDER
+    * No changes needed.
+    
+    #### UBERON
+    * Checked for NA values, dropped two obsolete terms (UBERON:0039300 and UBERON:0039302) not marked as obsolete in the source file.
+    
+    #### UMLS
+    * UMLS data pulled and  paths updated for 2023 data.
+    * :warning: `umls.ipynb` may need updates.
     </details>
+  
 - [Feb 2023] PrimeKG is [published](https://www.nature.com/articles/s41597-023-01960-3) in Nature Scientific Data. 
 - [Jun 2022] PrimeKG crosses 5,000 downloads on Harvard Dataverse! 
 - [Apr 2022] PrimeKG is live on [bioRxiv](https://www.biorxiv.org/content/10.1101/2022.05.01.489928v1) and [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM)!
