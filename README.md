@@ -204,4 +204,4 @@ If you find PrimeKG useful, cite our work:
 PrimeKG is hosted on [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM) with the following persistent identifier [https://doi.org/10.7910/DVN/IXA7BM](https://doi.org/10.7910/DVN/IXA7BM). When Dataverse is under maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please check the status on [the Dataverse website](https://dataverse.harvard.edu/).
 
 ## License
-PrimeKG codebase is under MIT license. For individual dataset usage, please refer to the dataset license found in the website.
+PrimeKG codebase and associated tools are released under the MIT license. Please note that this license specifically refers to the PrimeKG software, and is distinct from any licenses governing the PrimeKG dataset itself. For individual dataset usage, refer to the respective dataset licenses available on data website.
