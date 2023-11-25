@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ### Or use `conda`
 
 ```bash
-conda env create --name PrimeKG --file=environments.yml
+conda env create --name PrimeKG --file=environment.yml
 ```
 
 ## Using PrimeKG
