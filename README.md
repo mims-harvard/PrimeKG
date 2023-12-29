@@ -12,8 +12,66 @@
 **Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multimodal analyses. Download [this csv file](https://dataverse.harvard.edu/api/access/datafile/6180620) to get started!
  
 ## Updates
+- [Dec 2023] PrimeKG is updated and extended to better cover OMIM data source.
+    <details><summary>Details:</summary>
+
+    ### December 2023 update
+    In Dec 2023, a new version of PrimeKG that includes full OMIM entries and standardized data format is prepared.
+
+    ### Changes in the PrimeKG
+    For more details, see [this pull request](https://github.com/mims-harvard/PrimeKG/pull/12).
+    
+    To enable extension of PrimeKG with a new data source and include links with existing nodes in the knowledge graph,
+    we came up with a standardized data format ([@TDC - PR#207](https://github.com/mims-harvard/TDC/pull/207)) that is
+    used for all data sources in a same format as the PrimeKG data frame.
+    
+    #### General
+    * `datasets/processing_scripts/omim_tools.py` script contains functions to process OMIM data. 
+    * `datasets/omim/` folder aims to hold OMIM datasets
+    * `datasets/omim/omim-api.ipynb` notebook is the OMIM API wrapper, which is used to download OMIM entries (
+    API key is required).
+    * `knowledge_graph/append_omim.ipynb` notebook is used to actually append OMIM entries to the PrimeKG. 
+    * Added `scripts/utils.py` to include scripts that are used across multiple data sources.
+    
+    #### OMIM [new data source]
+    Many of the OMIM phenotype entries has been already included in the PrimeKG through MONDO but there are still much
+    information that was not included in the PrimeKG. Thus, we add scripts and notebooks to cover OMIM genes, 
+    phenotypes, phenotypic series (see[here](https://www.omim.org/help/faq#1_13)) entries and enable regular updates.
+
+    #### NCBI Gene
+    * OMIM gene entries are linked to NCBI Gene entries.
+    
+    #### Human Phenotype Ontology
+    * HPO-OMIM links are added to the PrimeKG.
+    
+    #### MONDO
+    * MONDO-OMIM links are added to the PrimeKG.
+    
+    #### Basic statistics
+    ```text
+    # of new edges: 612282
+    # of new node: 32866
+    ```
+    ```text
+    display_relation
+    associated with    581387
+    linked to           26784
+    members              4111
+    ```
+    ```text
+    relation
+    mim_disease                        9599
+    mim_gene                          16636
+    mim_phenotype                    574128
+    mim_phenotypic_series              4111
+    mim_phenotypic_series_disease       549
+    phenotype_map                      7259
+    ```
+
+  </details>
+
 - [July 2023] PrimeKG construction scripts are updated to include primary source data releases up to July 2023. Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG.
-    <details><summary>details:</summary>
+    <details><summary>Details:</summary>
 
     ### July 2023 update
     
