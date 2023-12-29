@@ -9,7 +9,20 @@
 [**Lab Website**](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) | [**Nature Publication**](https://www.nature.com/articles/s41597-023-01960-3) | [**Harvard Dataverse**](https://doi.org/10.7910/DVN/IXA7BM)
 
 ## TL;DR
-**Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major biological scales. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and diseases to enable multimodal analyses. Download [this csv file](https://dataverse.harvard.edu/api/access/datafile/6180620) to get started!
+**Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20
+high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major
+biological scales. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and
+diseases to enable multimodal analyses. Download [this csv file](https://dataverse.harvard.edu/api/access/datafile/6180620)
+to get started!
+
+## Table of Contents
+- [Unique Features of PrimeKG](#unique-features-of-primekg)
+- [Environment Setup](#environment-setup)
+- [Using PrimeKG](#using-primekg)
+- [Building an updated PrimeKG](#building-an-updated-primekg)
+- [Citing PrimeKG](#citing-primekg)
+- [License](#license)
+
 
 ## Unique Features of PrimeKG
  
@@ -121,7 +134,7 @@ The code to harmonize datasets and construct PrimeKG is available at `build_grap
 
 The code required to engineer features can be found at `engineer_features.ipynb` and `mapping_mayo.ipynb`. 
 
-## Cite Us
+## Citing PrimeKG
 
 If you find PrimeKG useful, cite our work:
 ```
@@ -137,7 +150,10 @@ If you find PrimeKG useful, cite our work:
 
 ## Data Server
 
-PrimeKG is hosted on [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM) with the following persistent identifier [https://doi.org/10.7910/DVN/IXA7BM](https://doi.org/10.7910/DVN/IXA7BM). When Dataverse is under maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please check the status on [the Dataverse website](https://dataverse.harvard.edu/).
+PrimeKG is hosted on [Harvard Dataverse](https://doi.org/10.7910/DVN/IXA7BM) with the following persistent
+identifier [https://doi.org/10.7910/DVN/IXA7BM](https://doi.org/10.7910/DVN/IXA7BM). When Dataverse is under
+maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please check the status on
+[the Dataverse website](https://dataverse.harvard.edu/).
 
 ## Updates
 - [Dec 2023] PrimeKG is updated and extended to better cover OMIM data source.
