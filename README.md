@@ -20,6 +20,7 @@ to get started!
 - [Environment Setup](#environment-setup)
 - [Using PrimeKG](#using-primekg)
 - [Building an updated PrimeKG](#building-an-updated-primekg)
+- [Data Server](#data-server)
 - [Citing PrimeKG](#citing-primekg)
 - [License](#license)
 
