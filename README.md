@@ -12,7 +12,7 @@
 **Precision Medicine Knowledge Graph (PrimeKG)** presents a holistic view of diseases. PrimeKG integrates 20
 high-quality biomedical resources to describe 17,080 diseases with 4,050,249 relationships representing ten major
 biological scales. We accompany PrimeKG’s graph structure with text descriptions of clinical guidelines for drugs and
-diseases to enable multimodal analyses. Download [this csv file](https://dataverse.harvard.edu/api/access/datafile/6180620)
+diseases to enable multimodal analyses. Download [this CSV file](https://dataverse.harvard.edu/api/access/datafile/6180620)
 to get started!
 
 ## Table of Contents
@@ -157,54 +157,63 @@ maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please c
 [the Dataverse website](https://dataverse.harvard.edu/).
 
 ## Updates
-- [Dec 2023] PrimeKG is updated and extended to better cover OMIM data source.
+- [Dec 2023] PrimeKG is extended to improve coverage of OMIM data.
+  
     <details><summary>Details:</summary>
 
     ### December 2023 update
-    In Dec 2023, a new version of PrimeKG that includes full OMIM entries and standardized data format is prepared.
+  
+    In December 2023, an updated version of PrimeKG that includes complete entries from the Online Mendelian Inheritance in Man
+    (OMIM) database in a standardized data format was prepared.
 
-    ### Changes in the PrimeKG
-    As discussed in [issue #9](https://github.com/mims-harvard/PrimeKG/issues/9) OMIM phenotypes and genes were
-    not fully included in the prior versions of PrimeKG. For more details, see 
+    #### Changes to PrimeKG
+    As discussed in [issue #9](https://github.com/mims-harvard/PrimeKG/issues/9), OMIM phenotypes and genes were
+    not fully included in prior versions of PrimeKG. For more details, see 
     [this pull request](https://github.com/mims-harvard/PrimeKG/pull/12).
     
-    To enable extension of PrimeKG with a new data source and include links with existing nodes in the knowledge graph,
-    we came up with a standardized data format ([@TDC - PR#207](https://github.com/mims-harvard/TDC/pull/207)) that is
-    used for all data sources in a same format as the PrimeKG data frame.
+    To extend of PrimeKG using a new data source and include edges between existing nodes in the knowledge graph,
+    we devised a standardized data format (see [PR#207](https://github.com/mims-harvard/TDC/pull/207) in mims-harvard/TD)
+    that is used for all data sources in the same format as the published PrimeKG edge list.
     
-    #### General
+    #### Summary
     * `datasets/processing_scripts/omim_tools.py` script contains functions to process OMIM data. 
-    * `datasets/omim/` folder aims to hold OMIM datasets
-    * `datasets/omim/omim-api.ipynb` notebook is the OMIM API wrapper, which is used to download OMIM entries (
-    API key is required).
-    * `knowledge_graph/append_omim.ipynb` notebook is used to actually append OMIM entries to the PrimeKG. 
-    * Added `scripts/utils.py` to include scripts that are used across multiple data sources.
+    * `datasets/omim/` folder should store OMIM datasets.
+    * `datasets/omim/omim-api.ipynb` notebook is the OMIM API wrapper, which is used to download OMIM entries (note that
+      an API key is required).
+    * `knowledge_graph/append_omim.ipynb` notebook is used to append OMIM entries to PrimeKG. 
+    * `scripts/utils.py` includes scripts that are used across multiple data sources.
     
-    #### OMIM [new data source]
-    Many of the OMIM phenotype entries has been already included in the PrimeKG through MONDO but there are still much
-    information that was not included in the PrimeKG. Thus, we add scripts and notebooks to cover OMIM genes, 
-    phenotypes, phenotypic series (see[here](https://www.omim.org/help/faq#1_13)) entries and enable regular updates.
+    #### OMIM Database
+    Many of the OMIM phenotype entries have been already included in the PrimeKG through MONDO; however, there still exists
+    OMIM information that was not included in the PrimeKG. Thus, we add scripts and notebooks to cover OMIM genes, 
+    phenotypes, and phenotypic series (see [here](https://www.omim.org/help/faq#1_13)) entries, and enable regular updates.
 
     #### NCBI Gene
-    * OMIM gene entries are linked to NCBI Gene entries.
+    * OMIM gene entries are linked to NCBI Gene entries via new edges in the KG.
     
     #### Human Phenotype Ontology
-    * HPO-OMIM links are added to the PrimeKG.
+    * HPO-OMIM edges are added to PrimeKG.
     
     #### MONDO
-    * MONDO-OMIM links are added to the PrimeKG.
+    * MONDO-OMIM edges are added to PrimeKG.
     
-    #### Basic statistics
+    #### Statistics
+    
+    New nodes and edges added:
     ```text
     # of new edges: 612282
     # of new node: 32866
     ```
+    
+    Updated edge count by `display_relation`:
     ```text
     display_relation
     associated with    581387
     linked to           26784
     members              4111
     ```
+
+    Updated edge_count by `relation`:
     ```text
     relation
     mim_disease                        9599
@@ -218,11 +227,12 @@ maintenance, PrimeKG datasets cannot be retrieved. That happens rarely; please c
   </details>
 
 - [July 2023] PrimeKG construction scripts are updated to include primary source data releases up to July 2023. Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG.
+  
     <details><summary>Details:</summary>
 
     ### July 2023 update
     
-    In July 2023, this repository was updated to rebuild PrimeKG and update the knowledge graph to include database releases up to July 2023.Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG. For more details, see [this pull request](https://github.com/mims-harvard/PrimeKG/pull/11).
+    In July 2023, this repository was updated to rebuild PrimeKG and update the knowledge graph to include database releases up to July 2023. Note that the files published on Harvard DataVerse remain unchanged; however, we provide new scripts and updated links should users wish to build their own current version of PrimeKG. For more details, see [this pull request](https://github.com/mims-harvard/PrimeKG/pull/11).
     
     17 scripts `datasets/processing_scripts/` are re-run or updated to build a new version of PrimeKG, while `datasets/feature_construction/` scripts may remain out-of-date. Re-run or updated primary data sources include Bgee, Comparative Toxicogenomics Database, DisGeNET, DrugBank, DrugCentral, NCBI Gene, Gene Ontology, Human Phenotype Ontology, MONDO, Reactome, SIDER, UBERON, and UMLS. 
     
