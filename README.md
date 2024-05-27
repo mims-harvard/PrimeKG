@@ -184,7 +184,7 @@ to get started!
 To install the dependencies required to run the PrimeKG code, use `pip`:
 
 ```bash
-pip install -r requirements.txt
+pip install -r updated_requirements.txt
 ```
 
 ### Or use `conda`
