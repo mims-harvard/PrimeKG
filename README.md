@@ -1,3 +1,9 @@
+> [!NOTE]
+> **PrimeKG has been superseded by [OptimusKG](https://optimuskg.ai).** Since OptimusKG contains a superset of PrimeKG's information, along with more up-to-date data, it is recommended to use OptimusKG instead of PrimeKG in almost every case.
+>
+> For more information, please see [optimuskg.ai](https://optimuskg.ai). OptimusKG code is available on [GitHub](https://github.com/mims-harvard/OptimusKG), and the dataset is available on [Harvard Dataverse](https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/IYNGEV) or via our [Python client](https://pypi.org/project/optimuskg).
+
+
 # PrimeKG
 ----
 
